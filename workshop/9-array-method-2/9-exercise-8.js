@@ -13,6 +13,10 @@
 // Otherwise returns false.
 function allLong(lst) {
   // lst is an array of strings
+  let longNames = lst.map(function(str){
+    return str.length >= 5;
+  })
+  return !longNames.includes(false);
 }
 
 console.log('Q8 - case 1', allLong(['Scott', 'Bob', 'Ric', 'Jim']));

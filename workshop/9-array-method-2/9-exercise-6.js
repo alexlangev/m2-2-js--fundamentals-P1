@@ -14,6 +14,9 @@
 
 function greet(lst) {
   // lst is an array of strings
+  return lst.map(function(str) {
+    return "Hello " + str;
+  })
 }
 
 console.log('Q6 greet()', greet(['David', 'Billy', 'Lisa', 'Jennifer']));

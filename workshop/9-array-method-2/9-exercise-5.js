@@ -13,6 +13,10 @@
 // greater than 5
 function keepLong(lst) {
   // lst is an array of strings
+  let longs = lst.filter(function(string){
+    return string.length > 5;
+  })
+  return longs;
 }
 
 console.log(

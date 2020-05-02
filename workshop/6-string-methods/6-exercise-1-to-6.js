@@ -50,7 +50,8 @@ console.log(`A1) Morty has ${numberOfNames} names`);
 // Q2
 // Convert the alternateRicks string to an array, so that each name ("Simple
 // Rick") is an element in that array. Log that array to the console.
-
+  const alternateRicksNames = alternateRicks.split(', ');
+  console.log(`A2) The alternate Ricks are: ${alternateRicksNames}`);
 //
 //
 //
@@ -58,14 +59,15 @@ console.log(`A1) Morty has ${numberOfNames} names`);
 // Q3
 // How many Ricks have been named in alternateRicks?
 // HINT: There are multiple ways to solve this one. Maybe try a `for` loop!
-
+console.log(`A3) ${alternateRicksNames.length} Ricks has been named.`);
 //
 //
 //
 //
 // Q4
 // How many characters are there in rickSaying (without spaces)?
-
+const rickSayingNoSpace = rickSaying.replace(/ /g,"");
+console.log(`A4) There is ${rickSayingNoSpace.length} characters exclusing the white spaces in rickSaying.`)
 //
 //
 //
@@ -73,14 +75,14 @@ console.log(`A1) Morty has ${numberOfNames} names`);
 // Q5
 // It turns out, Morty doesn't actually have a middle name. The `grandson`
 // string is wrong! Console Morty's name without "Antoine".
-
-//
-//
+const actualName = grandson.replace("Antoine ","");
+console.log(`A5) Morty's actual name is ${actualName}.`);
 //
 //
 // Q6
 // Scary Terry is actually not an enemy. Remove him from the list and console only Rick's true enemies.
-
+const enemiesUpdated = enemies.replace(" Scary Terry,", "");
+console.log(`A6) The enemies of Rick and Morty are: ${enemiesUpdated}`);
 //
 //
 //
@@ -90,6 +92,12 @@ console.log(`A1) Morty has ${numberOfNames} names`);
 // says. To decode the message, you'll need to remove any words that are found
 // in the "notCode" array.
 //
+let newSecret = secret;
+notCode.forEach(function(string){
+  newSecret = newSecret.replace(string, ""); 
+})
+console.log(`A7) ${newSecret}`);
+
 // For example:
 //   IF secret was `bluehired`
 //   AND notCode was `['blue', 'red']`
